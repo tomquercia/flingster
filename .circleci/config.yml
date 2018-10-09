@@ -1,4 +1,3 @@
-version: 3
 ## Setup machine
 machine:
   java:
@@ -33,18 +32,4 @@ test:
   override:
     - ionic cordova build android -Y
     - cp -r platforms/android/build/outputs/apk $CIRCLE_ARTIFACTS
-jobs:
-  build:
-    docker:
-      - image: debian:stretch
-    steps:
-      - checkout
-      - run:
-          name: platform add
-          command: ionic cordova platform add android -Y --noresources
-      - run:
-          name: npm install
-          command: npm install
-      - run:
-          name: build android
-          command: ionic cordova build android -Y
+
