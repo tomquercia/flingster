@@ -1,13 +1,25 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: debian:stretch
+    macos:
+      xcode: "9.3.0"
     steps:
       - checkout
       - run:
           name: Greeting
           command: echo Hello, world.
+      - run:
+          name: Xcode
+          command: which xcodebuild
+      - run:
+          name: npm
+          command: npm install
+      - run:
+          name: Adding Android
+          command: ionic cordova platform add android
+      - run: 
+          name: Adding iOS
+          command: ionic cordova platform add ios
       - run:
           name: Print the Current Time
           command: date
