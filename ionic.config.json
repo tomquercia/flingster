@@ -1,0 +1,7 @@
+{
+  "name": "Flingster",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
