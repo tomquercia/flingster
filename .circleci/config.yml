@@ -13,22 +13,4 @@ jobs:
           command: npm -v
       - run:
           name: installing ionic
-          command: npm install -g ionic
-      - run:
-          name: checking ionic
-          command: ionic version
-      - run:
-          name: installing cordova
-          command: npm install -g cordova
-      - run:
-          name: npm
-          command: npm install
-      - run:
-          name: Adding Android
-          command: ionic cordova platform add android
-      - run: 
-          name: Adding iOS
-          command: ionic cordova platform add ios
-      - run:
-          name: Print the Current Time
-          command: date
+          command: npm install ionic && npm install cordova && npm install && ionic cordova platform add android
