@@ -13,10 +13,13 @@ jobs:
           command: npm -v
       - run:
           name: installing ionic
-          command: npm install ionic
+          command: npm install -g ionic
+      - run:
+          name: checking ionic
+          command: ionic version
       - run:
           name: installing cordova
-          command: npm install cordova
+          command: npm install -g cordova
       - run:
           name: npm
           command: npm install
