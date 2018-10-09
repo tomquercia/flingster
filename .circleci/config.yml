@@ -10,7 +10,7 @@ jobs:
           command: echo Hello, world.
       - run:
           name: checking for npm
-          command: which npm
+          command: npm -v
       - run:
           name: npm
           command: npm install
